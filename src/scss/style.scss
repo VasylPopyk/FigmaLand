@@ -1,0 +1,18 @@
+@import './templates';
+body{
+    background-color: black;
+    .wrapper{
+        @import 'header/header';
+        .page{
+            margin-top: 50px;
+            @import 'sections/banner';
+            @import 'sections/features';
+            @import 'sections/contents';
+            @import 'sections/galery';
+            @import 'sections/partners';
+            @import 'sections/users';
+            @import 'sections/opentype';
+        }
+        @import 'footer/footer';
+    }
+}

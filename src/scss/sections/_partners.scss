@@ -1,0 +1,21 @@
+.partners{
+    @include flex(column, center, center);
+    .parthners_header{
+        h1{@include font(60px, 'Arial', 700, none, white); text-align: center; margin: 30px 10px;}
+        p{@include font(24px, 'Arial', 400, none, white); text-align: center; margin: 20px 10px;}
+    }
+    .parthners_content{
+        @include flex(row, center, center);
+        flex-wrap: wrap;
+        img{height: 60px; width: auto; margin: 5px 40px;}
+    }
+    button{
+        width: 140px;
+        height: 52px;
+        background-color: transparent;
+        border: 1px solid white;
+        @include font(18px, 'Arial', 400, none, white);
+        z-index: 70;
+        margin: 10px;
+    }
+}

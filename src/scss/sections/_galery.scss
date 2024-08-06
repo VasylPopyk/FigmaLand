@@ -1,0 +1,31 @@
+.galery{
+    margin: 30px auto;
+    @include flex(column, center, center);
+    .galery_header{
+        h1{@include font(60px, 'Arial', 700, none, white); text-align: center; margin: 30px 10px;}
+        p{@include font(24px, 'Arial', 400, none, white); text-align: center; margin: 20px 10px;}
+    }
+    .galery_content{
+        @include flex(column, center, center);
+        .galery_media{
+            @include flex(row, center, center);
+            flex-wrap: wrap;
+            img{width: auto;height: auto; margin: 5px; border-radius: 5px;}
+            margin: 20px 10px;
+        }
+        button{
+            width: 140px;
+            height: 52px;
+            background-color: transparent;
+            border: 1px solid white;
+            @include font(18px, 'Arial', 400, none, white);
+            z-index: 70;
+            margin: 10px;
+        }
+        @media(max-width: 900px){
+            .galery_media{
+                flex-direction: column;
+            }
+        }
+    }
+}

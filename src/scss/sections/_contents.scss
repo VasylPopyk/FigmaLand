@@ -1,0 +1,43 @@
+.contents{
+    margin: 30px auto;
+    @include flex(column, center, center);
+    .contents_header{
+        @include flex(column, center, center);
+        h1{@include font(60px, 'Arial', 700, none, white); text-align: center; margin: 30px 10px;}
+        p{@include font(24px, 'Arial', 400, none, white); text-align: center; margin: 20px 10px;}
+    }
+    .contents_content{
+        @include flex(row, center, center);
+        .contents_content_item{
+            margin: 10px;
+            border-radius: 10px;
+            background-color: white;
+            @include flex(column, center, center);
+            width: 100%;
+            height: 600px;
+            padding: 10px;
+            h3{@include font(24px, 'Arial', 700, none, black); text-align: center; margin: 20px 10px;}
+            p{@include font(18px, 'Arial', 400, none, grey); text-align: center; margin: 20px 10px; max-width: 300px;}
+            button{
+                width: 140px;
+                height: 52px;
+                background-color: rgb(50, 50, 255);
+                border: none;
+                @include font(18px, 'Arial', 400, none, white);
+                z-index: 70;
+                margin: 10px;
+            }
+            img{
+                width: 405px;
+                height: auto;
+                margin: 5px;
+            }
+        }
+        @media(max-width: 900px){
+            flex-direction: column;
+            .contents_content_item{
+                img{width: 300px;}
+            }
+        }
+    }
+}
